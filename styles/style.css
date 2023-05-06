@@ -77,7 +77,7 @@ header a {
     text-decoration: none;
     color: var(--text-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu .st {
@@ -165,7 +165,7 @@ nav {
     text-align: center;
     letter-spacing: 0.06em;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover {
@@ -380,7 +380,7 @@ nav {
     background-color: var(--text-color-2);
     fill: var(--svg-color);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg a:hover,
@@ -445,7 +445,7 @@ nav {
     align-items: center;
     justify-content: center;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers a:hover,
@@ -487,7 +487,7 @@ footer {
     color: var(--text-color-2);
     opacity: 0.5;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address1 a:hover,
@@ -601,6 +601,7 @@ footer {
     position: absolute;
     width: 528px;
     min-height: 581px;
+    padding: 40px;
     left: 50%;
     top: 50%;
     background: var(--text-color-2);
@@ -608,13 +609,13 @@ footer {
     border-radius: 4px;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+}
 
-  .is-hidden .modal {
+.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0);
-  }
+}
 
-.modal button {
+.but {
     padding: 6px 9px;
     position: absolute;
     top: 8px;
@@ -623,9 +624,223 @@ footer {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.is-hidden{
+.but:hover,
+.but:focus{
+    fill: var(--main-color);
+}
+
+.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+.form {
+    margin-left: 93px;
+    display: flex;
+}
+
+.form div {
+    display: flex;
+    gap: 12px;
+}
+
+.form h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--text-color-2);
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.email {
+    width: 358px;
+    padding: 15px 0;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    background: var(--bg-color);
+}
+
+.form button {
+    padding: 10px 28px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 0.06em;
+    background: var(--main-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: var(--text-color-2);
+    border: 0;
+}
+
+.form1 p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.modal-form .label {
+    display: block;
+    margin-bottom: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: var(--ph-color);
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+.input:focus+svg {
+    fill: var(--main-color);
+}
+
+.inputarea {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    padding: 12px 16px;
+    resize: none;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inputarea::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.inputarea:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+.modal-form .span {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.modal-form svg {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.modal-form .div1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.div1 a {
+    color: var(--main-color);
+    margin-left: 3px;
+}
+.div1{
+    margin-bottom: 30px;
+}
+.check {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--ph-color);
+}
+
+.modal-form button {
+    display: block;
+    margin: auto;
+    padding: 10px 52px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.06em;
+    color: var(--text-color-2);
+    background: var(--main-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+}
+.check::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border: 2px solid var(--title-color);
+    margin-right: 8px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.checkbox:checked + .check::before{
+    background-color: var(--main-color);
+    background-image: url(../imeges/page1/Vector.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+}
+.checkbox:focus + .check::before{
+    outline: 2px solid var(--main-color);
 }
